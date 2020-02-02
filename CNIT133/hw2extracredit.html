@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>hw2 extra credit</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      const uk = 1.24;
+      const canadian = 1.31;
+      const japanese = 108.38;
+      const mexican = 19.11;
+      const korean = 1187.76;
+      const euro = 0.89;
+
+      function submitPage() {
+        const dollars = parseFloat(
+          parseFloat(document.getElementById("dollars").value).toFixed(2)
+        );
+
+        const ukValue = document.getElementById("british");
+        ukValue.value = (uk * dollars).toFixed(2);
+
+        const canadianValue = document.getElementById("canada");
+        canadianValue.value = (canadian * dollars).toFixed(2);
+
+        const japaneseValue = document.getElementById("japanese");
+        japaneseValue.value = (japanese * dollars).toFixed(2);
+
+        const mexicanValue = document.getElementById("mexican");
+        mexicanValue.value = (mexican * dollars).toFixed(2);
+
+        const koreanValue = document.getElementById("korean");
+        koreanValue.value = (korean * dollars).toFixed(2);
+
+        const euroValue = document.getElementById("euro");
+        euroValue.value = (euro * dollars).toFixed(2);
+      }
+
+      function resetPage() {
+        const dollars = document.getElementById("dollars");
+        dollars.value = "";
+        submitPage();
+      }
+
+      $(document).ready(function() {
+        $("#flip").click(function() {
+          $("#panel").slideToggle("slow");
+        });
+      });
+    </script>
+    <style>
+      #panel,
+      #flip {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 290px;
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+      }
+
+      #panel {
+        display: none;
+      }
+      .table {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        padding: 5px;
+        /* min-width: 500px; */
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .result {
+        width: 98%;
+      }
+      table {
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="flip">Click to Show/Hide Instructions</div>
+    <div id="panel">
+      The foreign exchange rates in July 2019<br />Enter a dollar amount in the
+      table below to see the corresponding foreign exchange values
+    </div>
+
+    <table class="table">
+      <tr>
+        <th colspan="3">Money Exchange Rates</th>
+      </tr>
+      <tr>
+        <th>Currency</th>
+        <th>Rate</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>British Pound</td>
+        <td>1.24</td>
+        <td>
+          <input
+            type="number"
+            name="british"
+            id="british"
+            class="result"
+            readonly
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Canadian Dollar</td>
+        <td>1.31</td>
+        <td>
+          <input
+            type="number"
+            name="canada"
+            id="canada"
+            class="result"
+            readonly
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Euro</td>
+        <td>0.89</td>
+        <td>
+          <input type="number" name="euro" id="euro" class="result" readonly />
+        </td>
+      </tr>
+      <tr>
+        <td>Japanese Yen</td>
+        <td>108.38</td>
+        <td>
+          <input
+            type="number"
+            name="japanese"
+            id="japanese"
+            class="result"
+            readonly
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Mexican Peso</td>
+        <td>19.11</td>
+        <td>
+          <input
+            type="number"
+            name="mexican"
+            id="mexican"
+            class="result"
+            readonly
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Korean Won</td>
+        <td>1187.76</td>
+        <td>
+          <input
+            type="number"
+            name="korean"
+            id="korean"
+            class="result"
+            readonly
+          />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">American Dollar</td>
+        <td>
+          <input type="number" name="dollars" id="dollars" class="result" />
+        </td>
+      </tr>
+    </table>
+
+    <form action="javascript:void(0);" class="buttons">
+      <input type="submit" value="submit" onclick="submitPage()" />
+      <input type="reset" value="reset" onclick="resetPage()" /> <br />
+    </form>
+  </body>
+</html>

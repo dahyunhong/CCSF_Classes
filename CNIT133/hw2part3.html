@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>hw2part3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      function getNumbers() {
+        const numbers = document.getElementsByTagName("input");
+        const result = [];
+
+        for (let i = 0; i < numbers.length; i++) {
+          if (numbers[i].type === "text") {
+            result.push(parseInt(numbers[i].value));
+          }
+        }
+
+        return result;
+      }
+
+      function getLessThanZero(arr) {
+        let negative = 0;
+
+        arr.forEach(element => {
+          if (element < 0) {
+            negative++;
+          }
+        });
+
+        return negative;
+      }
+
+      function getMoreThanZero(arr) {
+        let positive = 0;
+
+        arr.forEach(element => {
+          if (element > 0) {
+            positive++;
+          }
+        });
+
+        return positive;
+      }
+
+      function getZeroes(arr) {
+        let zeros = 0;
+
+        arr.forEach(element => {
+          if (element === 0) {
+            zeros++;
+          }
+        });
+
+        return zeros;
+      }
+
+      function submitPage() {
+        const numbers = getNumbers();
+
+        const negative = getLessThanZero(numbers);
+        const positive = getMoreThanZero(numbers);
+        const zeroes = getZeroes(numbers);
+
+        const result = document.getElementById("result");
+        result.innerHTML = `positive numbers: ${positive}
+negative numbers: ${negative}
+zeros: ${zeroes}`;
+      }
+
+      function resetPage() {
+        const result = document.getElementById("result");
+        result.innerHTML = "";
+      }
+    </script>
+  </head>
+  <body>
+    <form action="javascript:void(0);">
+      <label for="number1">number1</label>
+      <input type="text" name="number1" id="number1" /> <br />
+
+      <label for="number2">number2</label>
+      <input type="text" name="number2" id="number2" /><br />
+
+      <label for="number3">number3</label>
+      <input type="text" name="number3" id="number3" /><br />
+
+      <label for="number4">number4</label>
+      <input type="text" name="number4" id="number4" /><br />
+
+      <label for="number5">number5</label>
+      <input type="text" name="number5" id="number5" /><br />
+
+      <input type="submit" value="submit" onclick="submitPage()" />
+      <input type="reset" value="reset" onclick="resetPage()" /> <br />
+
+      <textarea rows="6" cols="50" id="result" readonly></textarea>
+    </form>
+  </body>
+</html>

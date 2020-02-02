@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="133.css">
+    <title>hw2part2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function getNumbers(){
+            const numbers = document.getElementsByTagName('input');
+            const result=[]
+
+            for (let i=0; i < numbers.length; i++) {
+                if (numbers[i].type === 'text') {
+                    result.push(parseInt(numbers[i].value));
+                }
+            };
+
+            return result;
+        }
+
+        function getSum(array){
+            let result = 0 
+            array.forEach(element => {
+                result += element
+            });
+            return result;
+        }
+
+        function getAverage(array) {
+            return (getSum(array)/ array.length).toFixed(2)
+        }
+
+        function getProduct(array) {
+            let result = array[0];
+            for (let index = 1; index < array.length; index++) {
+                result *= array[index];
+            }
+            return result;
+        }
+
+        function getSmallest(array) {
+            return Math.min(...array)
+        }
+
+        function getLargest(array) {
+            return Math.max(...array)
+        }
+
+        function submitPage() {
+            const numbers = getNumbers();
+
+            const sum = getSum(numbers);
+            const average = getAverage(numbers);
+            const product = getProduct(numbers);
+            const smallest = getSmallest(numbers);
+            const largest = getLargest(numbers);
+
+            const result = document.getElementById("result")
+
+            result.innerHTML = `sum is ${sum}
+average is ${average}
+product is ${product}
+smallest is ${smallest}
+largest is ${largest}`
+        }
+
+        function resetPage() {
+            const result = document.getElementById("result");
+            result.innerHTML = "";
+        }
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("textarea").fadeTo("slow", 0.7);
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="javascript:void(0);">
+        <label for="number1">number1</label>
+        <input type="text" name="number1" id="number1"/> <br />
+
+        <label for="number2">number2</label>
+        <input type="text" name="number2" id="number2" /><br />
+
+        <label for="number3">number3</label>
+        <input type="text" name="number3" id="number3" /><br />
+    
+        <input type="submit" value="submit" onclick="submitPage()" /> <input type="reset" value="reset" onclick="resetPage()" /> <br />
+
+        <textarea rows="6" cols="50" id="result" readonly></textarea>
+        <button>click to fade result</button>
+    </form>
+</body>
+</html>
