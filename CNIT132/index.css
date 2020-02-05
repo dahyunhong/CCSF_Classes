@@ -1,0 +1,87 @@
+body {
+  background-color: #a388d3;
+}
+
+nav ul {
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+}
+
+nav ul li:hover {
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.6);
+}
+
+h1 {
+  color: yellow;
+  font-family: "Great Vibes", Helvetica, sans-serif;
+  font-size: 4em;
+}
+
+footer {
+  height: 15em;
+  background: #1f0252;
+  width: 98%;
+  margin: auto;
+}
+ul,
+li,
+a {
+  color: white;
+}
+p {
+  color: yellow;
+}
+
+ul,
+li,
+a,
+p {
+  font-family: "Merienda One", Helvetica, sans-serif;
+  font-size: 1em;
+}
+h2 {
+  font-family: "Merienda One", Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+.row {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 98%;
+}
+
+.card {
+  /* color: rgba(0, 0, 0, 0); */
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+.card-image {
+  margin: 2em;
+}
+
+.paragraphs {
+  width: 100%;
+  margin: 2em;
+  padding: 2em;
+  line-height: 1.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.paragraphs:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
