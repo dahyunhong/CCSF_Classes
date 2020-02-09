@@ -14,7 +14,7 @@ nav ul li:hover {
 }
 
 h1 {
-  color: yellow;
+  color: rgb(247, 247, 170);
   font-family: "Great Vibes", Helvetica, sans-serif;
   font-size: 4em;
 }
@@ -27,11 +27,10 @@ footer {
 }
 ul,
 li,
-a {
-  color: white;
-}
-p {
-  color: yellow;
+a,
+p,
+h2 {
+  color: #ededed;
 }
 
 ul,
