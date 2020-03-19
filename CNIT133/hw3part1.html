@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>hw3part1</title>
+    <script>
+      function submitPage() {
+        const hw = document.getElementById("homework").value;
+        const midterm = document.getElementById("midterm").value;
+        const final = document.getElementById("final").value;
+        const participation = document.getElementById("participation").value;
+
+        const grade = calculateGrade(hw, midterm, final, participation);
+        let message;
+        if (grade != null) {
+          if (grade < 101 && grade > 89) {
+            message = "Student got an A";
+          } else if (grade < 90 && grade > 79) {
+            message = "Student got a B";
+          } else if (grade < 80 && grade > 69) {
+            message = "Student got a C";
+          } else {
+            message = "Student must retake the course";
+          }
+          const result = document.getElementById("result");
+
+          result.value = message;
+        }
+      }
+
+      function calculateGrade(
+        homework,
+        midtermGrade,
+        finalGrade,
+        participation
+      ) {
+        if (
+          homework < 0 ||
+          homework > 100 ||
+          midtermGrade < 0 ||
+          midtermGrade > 100 ||
+          finalGrade < 0 ||
+          finalGrade > 100 ||
+          participation < 0 ||
+          participation > 100
+        ) {
+          alert("Your input is not valid. All numbers must be between 0-100");
+          return null;
+        } else {
+          return Math.round(
+            homework * 0.5 +
+              midtermGrade * 0.2 +
+              finalGrade * 0.2 +
+              participation * 0.1
+          );
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <navbar>
+      <ul>
+        <li><a href="/hw3.html">Return</a></li>
+      </ul>
+    </navbar>
+    <form action="javascript:void(0);">
+      <label for="homework">homework average</label>
+      <input type="number" name="homework" id="homework" /> <br />
+
+      <label for="midterm">midterm exam grade</label>
+      <input type="number" name="midterm" id="midterm" /><br />
+
+      <label for="final">final exam grade</label>
+      <input type="number" name="final" id="final" /><br />
+
+      <label for="participation">participation</label>
+      <input type="number" name="participation" id="participation" /><br />
+
+      <input type="submit" value="submit" onclick="submitPage()" />
+      <input type="reset" value="reset" /> <br />
+
+      <textarea rows="6" cols="50" id="result" readonly></textarea>
+    </form>
+  </body>
+</html>

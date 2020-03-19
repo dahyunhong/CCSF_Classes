@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>homework3 part 3</title>
+    <script>
+      function fahrenheit() {
+        const input = getInput();
+        result = (9 / 5) * input + 32;
+        document.getElementById("output").value = Math.round(result);
+      }
+
+      function celsius() {
+        const input = getInput();
+        result = (5 / 9) * (input - 32);
+        document.getElementById("output").value = Math.round(result);
+      }
+
+      function getInput() {
+        return document.getElementById("input").value;
+      }
+    </script>
+  </head>
+
+  <body>
+    <navbar>
+      <ul>
+        <li><a href="/hw3.html">Return</a></li>
+      </ul>
+    </navbar>
+    <h1>Homework 3 Part 3</h1>
+
+    <form action="javascript:void(0);">
+      <label for="input">Input Temperature</label>
+      <input type="number" name="input" id="input" /> <br />
+      Convert to:
+      <input type="submit" value="Fahrenheit" onclick="fahrenheit()" />
+      <input type="submit" value="Celsius" onclick="celsius()" /> <br />
+
+      <label for="output">Result</label>
+      <input type="number" name="output" id="output" readonly /><br />
+    </form>
+  </body>
+</html>

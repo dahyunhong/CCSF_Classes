@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>hw3part1</title>
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+      function submitPage() {
+        const name = document.getElementById("salesperson").value;
+        const Item1 = document.getElementById("Item1").value;
+        const Item2 = document.getElementById("Item2").value;
+        const Item3 = document.getElementById("Item3").value;
+        const Item4 = document.getElementById("Item4").value;
+
+        document.getElementById("Item1number").value = Item1;
+        document.getElementById("Item2number").value = Item2;
+        document.getElementById("Item3number").value = Item3;
+        document.getElementById("Item4number").value = Item4;
+
+        const total1 = Item1 * 239.99;
+        const total2 = Item2 * 129.75;
+        const total3 = Item3 * 99.95;
+        const total4 = Item4 * 350.89;
+
+        document.getElementById("Item1total").value = total1;
+        document.getElementById("Item2total").value = total2;
+        document.getElementById("Item3total").value = total3;
+        document.getElementById("Item4total").value = total4;
+
+        const grandTotal = total1 + total2 + total3 + total4;
+        document.getElementById("totalAmountSold").value = grandTotal.toFixed(
+          2
+        );
+
+        document.getElementById("totalWeeklyEarnings").value = (
+          200 +
+          0.09 * grandTotal
+        ).toFixed(2);
+      }
+      $(document).ready(function() {
+        $("#salesperson").tooltip();
+      });
+    </script>
+  </head>
+
+  <body>
+    <navbar>
+      <ul>
+        <li><a href="/hw3.html">Return</a></li>
+      </ul>
+    </navbar>
+    <form action="javascript:void(0);">
+      <label for="salesperson">Salesperson</label>
+      <input
+        type="text"
+        name="salesperson"
+        id="salesperson"
+        title="Please make sure that the salesperson's name is spelled correctly"
+      />
+      <br />
+
+      <label for="Item1">Item1</label>
+      <input type="number" name="Item1" id="Item1" /> <br />
+
+      <label for="Item2">Item2</label>
+      <input type="number" name="Item2" id="Item2" /><br />
+
+      <label for="Iteme3">Item3</label>
+      <input type="number" name="Item3" id="Item3" /><br />
+
+      <label for="Item4">Item4</label>
+      <input type="number" name="Item4" id="Item4" /><br />
+
+      <input type="submit" value="submit" onclick="submitPage()" />
+      <input type="reset" value="reset" /> <br />
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item #</th>
+          <th>Price</th>
+          <th>Number Sold</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>$239.99</td>
+          <td>
+            <input type="text" name="Item1number" id="Item1number" readonly />
+          </td>
+          <td>
+            <input type="text" name="Item1total" id="Item1total" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>$129.75</td>
+          <td>
+            <input type="text" name="Item2number" id="Item2number" readonly />
+          </td>
+          <td>
+            <input type="text" name="Item2total" id="Item2total" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>$99.95</td>
+          <td>
+            <input type="text" name="Item3number" id="Item3number" readonly />
+          </td>
+          <td>
+            <input type="text" name="Item3total" id="Item3total" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>$350.89</td>
+          <td>
+            <input type="text" name="Item4number" id="Item4number" readonly />
+          </td>
+          <td>
+            <input type="text" name="Item4total" id="Item4total" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">Total amount sold:</td>
+          <td>
+            <input
+              type="text"
+              name="totalAmountSold"
+              id="totalAmountSold"
+              readonly
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">Total weely earnings:</td>
+          <td>
+            <input
+              type="text"
+              name="totalWeeklyEarnings"
+              id="totalWeeklyEarnings"
+              readonly
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
