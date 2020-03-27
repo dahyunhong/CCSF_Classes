@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>homework4 extra credit</title>
+    <script>
+      function submitPage() {
+        const num = document.getElementById("number").value;
+        console.log(num);
+        if (num < 2 || num > 10) {
+          alert("Number needs to be between 2 and 10");
+        } else {
+          console.log("");
+          let square = "";
+
+          /***********************
+           ************************/
+
+          //// SQUARE
+          ///////////
+          for (let i = 0; i < num; i++) {
+            // EACH ROW
+            /***********************
+             ************************/
+
+            //// ROWS
+            ///////////
+
+            if (i == 0 || i == num - 1) {
+              /// FIRST OR LAST ROW
+
+              for (let j = 0; j < num; j++) {
+                // Column
+                square += "* ";
+              }
+              square += "\n";
+            } else {
+              // ALL OTHER ROWS
+
+              square += "* ";
+              for (let j = 0; j < num - 2; j++) {
+                square += "  ";
+              }
+              square += "* ";
+              square += "\n";
+            }
+
+            /***********************
+             ************************/
+          } //END ROW
+
+          /***********************
+           ************************/
+          console.log(square);
+          document.getElementById("result").innerHTML = square;
+        }
+      }
+
+      const resetPage = () => {
+        document.getElementById("result").innerHTML = "";
+      };
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="hw4.html">Return</a></li>
+        <li><a href="hw4part1.html">Part 1</a></li>
+        <li><a href="hw4part2.html">Part 2</a></li>
+        <li><a href="hw4extra.html">Extra Credit</a></li>
+      </ul>
+    </nav>
+    <h1>Homework 4</h1>
+    <form action="javascript:void(0);">
+      <label for="number">How many stars? (2-10)</label>
+      <input type="text" name="number" id="number" /> <br />
+
+      <input type="submit" value="submit" onclick="submitPage()" />
+      <input type="reset" value="reset" onclick="resetPage()" /> <br />
+
+      <textarea
+        rows="12"
+        cols="50"
+        id="result"
+        style="font-family: 'Courier New', Courier, monospace"
+        readonly
+      ></textarea>
+    </form>
+  </body>
+</html>

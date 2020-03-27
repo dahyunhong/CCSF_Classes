@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>homework4 part1</title>
+
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $(".draggable").draggable();
+      });
+    </script>
+
+    <script>
+      let answer1, answer2, answer3, answer4;
+
+      answer1 = 0;
+      for (let i = 5; i < 22; i += 4) {
+        answer1 += i;
+      }
+
+      answer2 = 1;
+      for (let i = 5; i < 22; i += 4) {
+        answer2 *= i;
+      }
+
+      answer3 = 1;
+      let j = 3;
+      while (j < 22) {
+        answer3 *= j;
+        j += 3;
+      }
+      answer4 = 0;
+      j = 3;
+      while (j < 22) {
+        answer4 += j;
+        j += 3;
+      }
+
+      let string1 = `5 + 9 + 13 + 17 + 21 = ${answer1}`;
+
+      let string2 = `5 x 9 x 13 x 17 x 21 = ${answer2}`;
+      let string3 = `3 x 6 x 9 x 12 x 15 x 18 x 21 = ${answer3}`;
+      let string4 = `3 + 6 + 9 + 12 + 15 + 18 + 21 = ${answer4}`;
+      console.log(string1, string2, string3, string4);
+
+      console.log(document.getElementById("answer1"));
+
+      function showAnswers() {
+        document.getElementById("answer1").textContent = string1;
+        document.getElementById("answer2").textContent = string2;
+        document.getElementById("answer3").textContent = string3;
+        document.getElementById("answer4").textContent = string4;
+      }
+    </script>
+
+    <style>
+      div {
+        border-style: solid;
+        border-color: rgb(243, 238, 239);
+        max-width: 200px;
+        background-color: rgb(236, 117, 133);
+      }
+    </style>
+  </head>
+
+  <body onload="showAnswers()">
+    <nav>
+      <ul>
+        <li><a href="hw4.html">Return</a></li>
+        <li><a href="hw4part1.html">Part 1</a></li>
+        <li><a href="hw4part2.html">Part 2</a></li>
+        <li><a href="hw4extra.html">Extra Credit</a></li>
+      </ul>
+    </nav>
+    <h1>Homework 4</h1>
+    <div id="answer1" class="draggable" class="ui-widget-content"></div>
+    <div id="answer2" class="draggable" class="ui-widget-content"></div>
+    <div id="answer3" class="draggable" class="ui-widget-content"></div>
+    <div id="answer4" class="draggable" class="ui-widget-content"></div>
+  </body>
+</html>

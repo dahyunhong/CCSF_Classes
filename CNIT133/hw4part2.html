@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>homework4 part2</title>
+
+    <script>
+      const principal = 1000;
+      const interest1 = 0.05;
+      const interest2 = 0.06;
+      const interest3 = 0.07;
+
+      const investment1 = [];
+      const investment2 = [];
+      const investment3 = [];
+
+      const years = 10;
+
+      for (let i = 1; i <= years; i++) {
+        investment1[i - 1] = calcInvestment(principal, interest1, i).toFixed(2);
+      }
+      for (let i = 1; i <= years; i++) {
+        investment2[i - 1] = calcInvestment(principal, interest2, i).toFixed(2);
+      }
+      for (let i = 1; i <= years; i++) {
+        investment3[i - 1] = calcInvestment(principal, interest3, i).toFixed(2);
+      }
+
+      function calcInvestment(principal, interest, time) {
+        return Math.pow(interest + 1, time) * principal;
+      }
+
+      function fillTables() {
+        table1 = document.createElement("TABLE"); // <table></table>
+        table2 = document.createElement("TABLE");
+        table3 = document.createElement("TABLE");
+
+        const thead1 = table1.createTHead();
+        thead1.classList.add("tableHeader");
+        const row1 = thead1.insertRow(0);
+        addHeaders(row1);
+
+        for (let i = 0; i < 10; i++) {
+          let tableRow = document.createElement("TR"); //<tr><tr/>
+          table1.appendChild(tableRow);
+
+          let tableCell = tableRow.insertCell();
+          tableCell.textContent = i + 1;
+
+          tableCell = tableRow.insertCell();
+          tableCell.textContent = investment1[i];
+
+          tableCell = tableRow.insertCell();
+          tableCell.textContent = interest1;
+        }
+
+        const thead2 = table2.createTHead();
+        thead2.classList.add("tableHeader");
+        const row2 = thead2.insertRow(0);
+        addHeaders(row2);
+
+        for (let i = 0; i < 10; i++) {
+          let tableRow = document.createElement("TR"); //<tr><tr/>
+          table2.appendChild(tableRow);
+
+          let tableCell = tableRow.insertCell();
+          tableCell.textContent = i + 1;
+
+          tableCell = tableRow.insertCell();
+          tableCell.textContent = investment2[i];
+
+          tableCell = tableRow.insertCell();
+          tableCell.textContent = interest2;
+        }
+
+        const thead3 = table3.createTHead();
+        thead3.classList.add("tableHeader");
+        const row3 = thead3.insertRow(0);
+        addHeaders(row3);
+
+        for (let i = 0; i < 10; i++) {
+          let tableRow = document.createElement("TR"); //<tr><tr/>
+          table3.appendChild(tableRow);
+
+          let tableCell = tableRow.insertCell();
+          tableCell.textContent = i + 1;
+
+          tableCell = tableRow.insertCell();
+          tableCell.textContent = investment3[i];
+
+          tableCell = tableRow.insertCell();
+          tableCell.textContent = interest3;
+        }
+
+        const body = document.getElementsByTagName("BODY")[0];
+
+        body.appendChild(table1);
+        body.appendChild(table2);
+        body.appendChild(table3);
+      }
+
+      function addHeaders(row) {
+        const cell1 = row.insertCell(0);
+        cell1.textContent = "Year";
+
+        const cell2 = row.insertCell(1);
+        cell2.textContent = "Amount on Deposit";
+
+        const cell3 = row.insertCell(2);
+        cell3.textContent = "Interest";
+      }
+    </script>
+
+    <style>
+      table {
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      td {
+        padding: 10px;
+      }
+
+      table .tableHeader tr td {
+        background-color: maroon;
+        color: white;
+      }
+
+      table tr:nth-child(even) {
+        background-color: azure;
+        color: black;
+      }
+      table tr:nth-child(odd) {
+        background-color: cornflowerblue;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body onload="fillTables()">
+    <nav>
+      <ul>
+        <li><a href="hw4.html">Return</a></li>
+        <li><a href="hw4part1.html">Part 1</a></li>
+        <li><a href="hw4part2.html">Part 2</a></li>
+        <li><a href="hw4extra.html">Extra Credit</a></li>
+      </ul>
+    </nav>
+    <h1>Homework 4</h1>
+  </body>
+</html>
