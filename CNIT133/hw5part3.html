@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>homework5 part3</title>
+    <script>
+      const state = [
+        ["AL", "Alabama", "Mongomery", 4887871],
+        ["AK", "Alaska", "Juneau", 737438],
+        ["AZ", "Arizona", "Phoenix", 7171646],
+        ["AR", "Arkansas", "little Rock", 3010825],
+        ["CA", "California", "Sacramento", 39557045],
+        ["CO", "Colorado", "Denver", 5694564]
+      ];
+
+      const submitState = () => {
+        const search = document.getElementById("typeState").value;
+        let result = searchState(search);
+        document.getElementById("result").textContent = result;
+      };
+
+      const searchState = search => {
+        for (const s of state) {
+          if (
+            s[0].toLowerCase() == search.toLowerCase() ||
+            s[1].toLowerCase() == search.toLowerCase()
+          ) {
+            return `Thanks for your inquiry, here is the information you requested:
+State abbr = ${s[0]}
+State Name = ${s[1]}
+Capital = ${s[2]}
+Population = ${s[3]}`;
+          }
+        }
+        return "We can not find the state";
+      };
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Return</a></li>
+        <li><a href="hw5part1.html">Part 1</a></li>
+        <li><a href="hw5part2.html">Part 2</a></li>
+        <li><a href="hw5part3.html">Part 3</a></li>
+      </ul>
+    </nav>
+    <h1>Homework 5 part3</h1>
+    <form action="javascript:void(0)">
+      <label for="typeState">Type a state: </label>
+      <input type="text" name="typeState" id="typeState" />
+      <input type="submit" value="submit" onclick="submitState()" />
+      <br />
+      <textarea name="result" id="result" cols="30" rows="10"></textarea>
+    </form>
+  </body>
+</html>

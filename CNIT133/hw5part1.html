@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <title>homework5</title>
+    <style>
+      form label {
+        display: block;
+      }
+      form #submit {
+        display: block;
+      }
+    </style>
+
+    <script>
+      function validate() {
+        const text = document.getElementById("text").value;
+        const radio1 = document.getElementById("radio1");
+        const radio2 = document.getElementById("radio2");
+        const checkbox1 = document.getElementById("checkbox1");
+        const checkbox2 = document.getElementById("checkbox2");
+        const option = document.getElementById("option");
+
+        if (
+          text == "" ||
+          (!radio1.checked && !radio2.checked) ||
+          (!checkbox1.checked && !checkbox2.checked) ||
+          option.selected
+        ) {
+          document.getElementById("message").textContent =
+            "You need to fill in all the forms";
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Return</a></li>
+        <li><a href="hw5part1.html">Part 1</a></li>
+        <li><a href="hw5part2.html">Part 2</a></li>
+        <li><a href="hw5part3.html">Part 3</a></li>
+      </ul>
+    </nav>
+    <h1>Homework 5 Part 1</h1>
+    <form action="submitted.html" onsubmit="return validate()">
+      <label for="text">Enter text:</label>
+      <input type="text" name="text" id="text" />
+      <label for="radio1">Radio 1:</label>
+      <input type="radio" name="radio" id="radio1" />
+      <label for="radio2">radio 2</label>
+      <input type="radio" name="radio" id="radio2" />
+      <label for="checkbox1">checkbox1</label>
+      <input type="checkbox" name="checkbox1" id="checkbox1" />
+      <label for="checkbox2">checkbox 2</label>
+      <input type="checkbox" name="checkbox2" id="checkbox2" />
+      <label for="item1">item1</label>
+      <select name="item1" id="item1">
+        <option value="option" id="option">Please select an option</option>
+        <option value="option1">option1</option>
+        <option value="option2">option2</option>
+      </select>
+      <input type="submit" value="submit" />
+      <input type="reset" value="reset" />
+    </form>
+    <section id="message"></section>
+  </body>
+</html>
