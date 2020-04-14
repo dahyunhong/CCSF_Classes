@@ -1,0 +1,4 @@
+Question 4
+
+I think It will take for at least 38 years fot people to calculate 10 million 10-digit additions.
+Because when I try to do one ten digit additions, it takes me at least 2 minutes. and we assume that it takes the same amount each time. That means it will take 20 million minutes. If you convert this to years it is 38.05 years.
