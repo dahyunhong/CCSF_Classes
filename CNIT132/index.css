@@ -1,5 +1,5 @@
 body {
-  background-color: #a388d3;
+  background-color: #fff;
 }
 
 nav ul {
@@ -14,23 +14,22 @@ nav ul li:hover {
 }
 
 h1 {
-  color: rgb(247, 247, 170);
+  color: #333;
   font-family: "Great Vibes", Helvetica, sans-serif;
   font-size: 4em;
 }
 
 footer {
-  height: 15em;
-  background: #1f0252;
-  width: 98%;
-  margin: auto;
+  text-align: center;
+  padding: 10px;
+  min-width: 860px;
 }
 ul,
 li,
 a,
 p,
 h2 {
-  color: #ededed;
+  color: #333;
 }
 
 ul,
@@ -73,14 +72,6 @@ img {
   margin: 2em;
 }
 
-.paragraphs {
-  width: 100%;
-  margin: 2em;
-  padding: 2em;
-  line-height: 1.5em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
 .paragraphs:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }

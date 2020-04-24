@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <title>hw6 Part1</title>
+    <link rel="stylesheet" href="133.css" />
+    <script>
+      function submitPage() {
+        const number = document.getElementById("text").value;
+        const message = document.getElementById("message");
+
+        if (isNaN(number) || lessThanFourDec(number)) {
+          message.textContent =
+            "This is invalid. Enter the number at least with 4 decimals.";
+        } else {
+          const nearestInteger = Math.round(number);
+          const squareInteger = Math.round(Math.sqrt(number));
+          const tenths = parseFloat(number).toFixed(1);
+          const hundredths = parseFloat(number).toFixed(2);
+          const thousandths = parseFloat(number).toFixed(3);
+
+          message.textContent = `Nearest integer: ${nearestInteger}
+Squareroot integer: ${squareInteger}
+Rounded to tenths: ${tenths}
+Rounded to hundredths: ${hundredths}
+Rounded to thousandths: ${thousandths}`;
+        }
+      }
+
+      function resetPage() {
+        document.getElementById("message").textContent = "";
+      }
+
+      function lessThanFourDec(num) {
+        const dec = num.indexOf(".");
+        if (dec == -1) return true;
+        if (num.length - dec < 4) return true;
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i>HW6</span
+        >Part1
+      </h1>
+      <ul>
+        <li><a href="index.html">Return</a></li>
+        <li><a href="hw6part1.html">Part 1</a></li>
+        <li><a href="hw6part2.html">Part 2</a></li>
+        <li><a href="hw6part3.html">Part 3</a></li>
+      </ul>
+    </nav>
+
+    <form action="javascript:void(0)">
+      <div class="form-group">
+        <label for="text">Enter number: (at lease 4 decimal)</label>
+        <input type="text" name="text" id="text" />
+      </div>
+      <div class="form-group" id="buttons">
+        <input type="submit" value="submit" onclick="submitPage()" />
+        <input type="reset" value="reset" onclick="resetPage()" />
+      </div>
+    </form>
+    <div class="form-group">
+      <textarea id="message" rows="6" cols="50"></textarea>
+    </div>
+  </body>
+</html>

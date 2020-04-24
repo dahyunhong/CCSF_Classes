@@ -13,7 +13,7 @@
         ["AZ", "Arizona", "Phoenix", 7171646],
         ["AR", "Arkansas", "little Rock", 3010825],
         ["CA", "California", "Sacramento", 39557045],
-        ["CO", "Colorado", "Denver", 5694564]
+        ["CO", "Colorado", "Denver", 5694564],
       ];
 
       const submitState = () => {
@@ -22,7 +22,7 @@
         document.getElementById("result").textContent = result;
       };
 
-      const searchState = search => {
+      const searchState = (search) => {
         for (const s of state) {
           if (
             s[0].toLowerCase() == search.toLowerCase() ||
@@ -41,7 +41,11 @@ Population = ${s[3]}`;
   </head>
 
   <body>
-    <nav>
+    <nav id="navbar">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i>HW5</span
+        >Part3
+      </h1>
       <ul>
         <li><a href="index.html">Return</a></li>
         <li><a href="hw5part1.html">Part 1</a></li>
@@ -49,7 +53,7 @@ Population = ${s[3]}`;
         <li><a href="hw5part3.html">Part 3</a></li>
       </ul>
     </nav>
-    <h1>Homework 5 part3</h1>
+
     <form action="javascript:void(0)">
       <label for="typeState">Type a state: </label>
       <input type="text" name="typeState" id="typeState" />
