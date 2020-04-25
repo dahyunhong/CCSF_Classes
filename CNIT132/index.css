@@ -1,7 +1,20 @@
-body {
-  background-color: #fff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #fff;
+  line-height: 1.7em;
+}
+
+.header {
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+}
 nav ul {
   list-style: none;
   flex-direction: row;
@@ -13,11 +26,13 @@ nav ul li:hover {
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.6);
 }
 
-h1 {
+/* h1 {
   color: #333;
   font-family: "Great Vibes", Helvetica, sans-serif;
   font-size: 4em;
-}
+  height: 5rem;
+  padding: 1rem;
+} */
 
 footer {
   text-align: center;
@@ -38,6 +53,7 @@ a,
 p {
   font-family: "Merienda One", Helvetica, sans-serif;
   font-size: 1em;
+  /* padding: 1rem; */
 }
 h2 {
   font-family: "Merienda One", Helvetica, sans-serif;
@@ -45,7 +61,7 @@ h2 {
 }
 
 img {
-  max-width: 300px;
+  /* max-width: 300px; */
   height: auto;
   display: block;
 }

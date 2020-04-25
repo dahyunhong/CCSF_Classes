@@ -18,12 +18,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Assignments</title>
   </head>
+  <style>
+    body {
+      font-family: "Merienda One", Helvetica, sans-serif;
+    }
+    header,
+    footer {
+      padding: 3rem;
+      background: lightgray;
+      color: black;
+      text-align: center;
+    }
+    #contact-form .container ul li {
+      padding: 1rem;
+      padding-top: 1rem;
+      text-decoration: none;
+      list-style: none;
+    }
+    #contact-form .container ul li a {
+      text-decoration: none;
+      border-bottom: 2px black solid;
+      padding: 2px;
+      color: brown;
+    }
+    #contact-form .container ul li a:hover {
+      color: black;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 2rem;
+    }
+    .container img {
+      height: 500px;
+      width: auto;
+    }
+  </style>
+
   <body>
-    <h1>CNIT 132 Assignment</h1>
-    <ul>
-      <li><a href="./homework1.html">Home</a></li>
-      <li><a href="./homework2.html">Mini Project2</a></li>
-      <li><a href="./shorttask.html">Short Task </a></li>
-    </ul>
+    <header>
+      <h1 class="logo">CNIT 132 Assignment</h1>
+    </header>
+    <section id="contact-form">
+      <div class="container">
+        <ul>
+          <li><a href="./homework1.html">Home</a></li>
+          <li><a href="./homework2.html">Mini Project2</a></li>
+          <li><a href="./shorttask.html">Short Task </a></li>
+        </ul>
+        <div class="container">
+          <img class="img" src="images/study.jpg" alt="studypic" />
+        </div>
+      </div>
+    </section>
+    <footer id="main-footer">
+      <p>CNIT132 &copy; Dahyun Hong</p>
+      <p>
+        Email me here:
+        <a
+          href="mailto:dhong24@mail.ccsf.edu?Subject=CNIT%20class%20email"
+          target="_top"
+          >dhong24@mail.ccsf.edu</a
+        >
+      </p>
+    </footer>
   </body>
 </html>

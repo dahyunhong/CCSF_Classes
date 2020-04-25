@@ -27,11 +27,23 @@
   }
 
   body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.7em;
+    font-family: "Merienda One", Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
   }
+  h1 {
+  color: #333;
+  
+  font-size: 4em;
+  height: 5rem;
+  padding: 1rem;
+}
+p{
+  padding:1rem;
+}
+img{
+  max-width:300px
+}
  
   header,
   footer {
@@ -85,6 +97,9 @@
     padding: 50px 30px;
     text-align: center;
   }
+  #middlepart ul li a.current{
+    color:black;
+  }
 
   #header .logo {
     text-decoration: none;
@@ -110,7 +125,7 @@
     <div id="header">
       <div class="container">
         <h1 class="logo">
-          Dahyun Hong CNIT 132
+          CNIT 132 Dahyun Hong
         </h1>
         
       </div>
@@ -120,10 +135,10 @@
   <section id="middlepart">
     <div class="menu">
       <ul>
-        <li><a href="homework1.html">Home</a></li>
+        <li><a class="current" href="homework1.html">Home</a></li>
         <li><a href="assignments.html">Assignment</a></li>
-        <li><a href="#">Meetup</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="meetup.html">Meetup</a></li>
+        <li><a href="contact_1.html">Contact</a></li>
       </ul>
     </div>
     <div class="content">
@@ -150,7 +165,12 @@
     </div>
   </section>
   <footer id="main-footer">
-      <p>Short Task &copy; 04, 14, 2020</p>
+      <p>CNIT132 &copy; Dahyun Hong</p>
+      <p>
+        Email me here:
+        <a href="mailto:dhong24@mail.ccsf.edu?Subject=CNIT%20class%20email" target="_top">dhong24@mail.ccsf.edu</a>
+      </p>
+
   </footer>
 </body>
 
