@@ -1,0 +1,334 @@
+<!DOCTYPE html
+><!-- Name : dahyun hong , date : Apr 21st -->
+
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta property="og:title" content="Meet Up Assignment" />
+    <meta
+      property="og:description"
+      content="This is the page that have good website for front end development."
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merienda+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Meet Up Assignment</title>
+  </head>
+
+  <style>
+    .item {
+      border: #ccc solid 2px;
+      margin: 5px;
+      text-align: center;
+      height: 300px;
+      width: 600px;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      background-size: cover;
+    }
+
+    .container {
+      display: flex;
+      padding: 1rem;
+      overflow: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .container > article {
+      flex: 0 50%;
+      /*demo*/
+      border: white solid;
+      box-sizing: border-box;
+    }
+    .container .img {
+      height: 300px;
+      min-height: 300px;
+      width: 600px;
+      /* height: 50%; */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      padding: 2rem;
+    }
+    .img .item_text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+    }
+
+    .img .item_text p {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.3rem;
+    }
+    .img .item_text p:hover {
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .img_1 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web1.png");
+    }
+    .img_2 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web2.png");
+    }
+
+    .img_3 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web3.png");
+    }
+
+    .img_4 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web4.png");
+    }
+
+    .img_5 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web5.png");
+    }
+
+    .img_6 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web6.png");
+    }
+
+    .img_7 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web7.png");
+    }
+
+    .img_8 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web8.png");
+    }
+
+    .img_9 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web9.png");
+    }
+
+    .img_10 {
+      background-image: linear-gradient(
+          var(--gradient-color),
+          var(--gradient-color)
+        ),
+        url("./images/web10.png");
+    }
+
+    @media screen and (max-width: 1224px) {
+      .container > article {
+        flex: 0 100%;
+      }
+    }
+    @media screen and (max-width: 770px) {
+      .img .item_text p {
+        font-size: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 525px) {
+      .item_text {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+
+  <body>
+    <header id="header">
+      <h1 class="logo">
+        CNIT 132 Dahyun Hong
+      </h1>
+    </header>
+
+    <main id="middlepart">
+      <nav class="menu">
+        <ul>
+          <li><a href="homework1.html">Home</a></li>
+          <li><a href="assignments.html">Assignment</a></li>
+          <li><a class="current" href="meetup.html">Meetup</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="container">
+        <article class="img img_1">
+          <div class="item_text">
+            <a
+              href="https://itnext.io/4-css-tricks-ive-learnt-the-hard-way-aab1e7e8ff44"
+            >
+              <p>
+                Medium website is a blogging platform, which is really good that
+                you can share your story.Also, you can find good information
+                about technology whichi is The Innovation & Tech category that I
+                recommend.
+              </p></a
+            >
+          </div>
+        </article>
+        <article class="img img_2">
+          <div class="item_text">
+            <a href="https://www.freecodecamp.org/">
+              <p>
+                freecodecamp helps students build portfolios of real apps. This
+                website offers free verified certifications in Front End
+                Development.I think it is good that you can make your own
+                project.
+              </p></a
+            >
+          </div>
+        </article>
+        <article class="img img_3">
+          <div class="item_text">
+            <a
+              href="https://www.udemy.com/courses/development/web-development/"
+            >
+              <p>
+                Udemy is an online learning platform you can learn all different
+                topic. Most of the course are paid, but it often has good deal
+                liek 90% discount. also you can take find free courses. I highly
+                recommend you take Modern HTML & CSS course by Brad Traversy the
+                lecture cover all the fundamentals for you and you can learn
+                about web developer from the scratch.
+              </p>
+            </a>
+          </div>
+        </article>
+        <article class="img img_4">
+          <div class="item_text">
+            <a href="https://www.coursera.org/">
+              <p>
+                Coursera is a online learning platform like udemy. The good
+                thing about coursera is all the courses are free. you can get
+                certificate after you complite the course.
+              </p>
+            </a>
+          </div>
+        </article>
+        <article class="img img_5">
+          <div class="item_text">
+            <a href="https://teamtreehouse.com/"
+              ><p>
+                The Treehouse website is very popular online learning platform
+                in web development. Treehouse might be one fo the best website
+                for learning web development, but the cost started from 25
+                dollor to 200 dollor a month.
+              </p>
+            </a>
+          </div>
+        </article>
+        <article class="img img_6">
+          <div class="item_text">
+            <a href="https://www.codecademy.com/">
+              <p>
+                Codecademy is perfect website to start learning coding. It
+                doesn't teach you how to do programming. But it give you the
+                idea of coding and you can learn coding by memorising.
+              </p>
+            </a>
+          </div>
+        </article>
+        <article class="img img_7">
+          <div class="item_text">
+            <a href="https://www.w3schools.com/"
+              ><p>
+                W3Schools is well known website for porgramming and web
+                development. I use W2School website every time when I have
+                question about CSS and HTML.
+              </p>
+            </a>
+          </div>
+        </article>
+        <article class="img img_8">
+          <div class="item_text">
+            <a href="https://www.htmldog.com/">
+              <p>
+                htmldog website is helpful for people who just start learning
+                HTML or CSS. I use this website when I am confused about tags.
+                The website has tutorials and you can understand basic of HTML
+                and CSS well.
+              </p>
+            </a>
+          </div>
+        </article>
+        <article class="img img_9">
+          <div class="item_text">
+            <a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA"
+              ><p>
+                As you know, youtube has a lot of different kind of resources. I
+                highly recommend “Traversy Media” for learning web development.
+                It is very organized and you can watch it for free.
+              </p>
+            </a>
+          </div>
+        </article>
+        <article class="img img_10">
+          <div class="item_text">
+            <a href="https://classroom.udacity.com/courses/ud001"
+              ><p>
+                Udacity is my foavorite website that I usually use. It has some
+                free course for web developer, such as javascript, HTML, CSS and
+                Jquery. You can watch the lectures first and they give you the
+                practice. I like the website. Because you can practice what you
+                have learned.
+              </p>
+            </a>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer id="main-footer">
+      <p>CNIT132 &copy; Dahyun Hong</p>
+      <p>
+        Email me here:
+        <a
+          href="mailto:dhong24@mail.ccsf.edu?Subject=CNIT%20class%20email"
+          target="_top"
+          >dhong24@mail.ccsf.edu</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

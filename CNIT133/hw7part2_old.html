@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <title>hw7part2</title>
+    <style>
+      .logo a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      .dropdown {
+        overflow: hidden;
+      }
+      .dropdown .dropbtn {
+        font-size: 18px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #333;
+        padding: 14px 51px;
+        margin: 0.1rem;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: pink;
+        min-width: 220px;
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #fff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+    <script>
+      function showMenu() {
+        console.log("show menu");
+      }
+      function hideMenu() {
+        console.log("hide menu");
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <h1 class="logo">
+        <a href="hw7.html">
+          <span class="text-primary"><i class="fas fa-book-open"></i>HW7 </span
+          >part2
+        </a>
+      </h1>
+      <ul>
+        <li><a href="index.html">Return</a></li>
+        <li><a href="hw7part1.html">Part 1</a></li>
+        <li><a href="hw7part2.html">Part 2</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="dropdown">
+        <button class="dropbtn">
+          Homework 1
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./index.html">Hw1</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Homework 2
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./hw2.html">HW2</a>
+          <a href="./hw2part1.html">HW2 Part1</a>
+          <a href="./hw2part2.html">HW2 Part2</a>
+          <a href="./hw2part3.html">Hw2 Part3</a>
+          <a href="./hw2extracredit.html">Hw2 Extra Credit</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Homework 3
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./hw3.html">HW3</a>
+          <a href="./hw3part1.html">HW3 Part1</a>
+          <a href="./hw3part2.html">HW3 Part2</a>
+          <a href="./hw3part3.html">Hw3 Part3</a>
+          <a href="./hw3part4.html">Hw3 Part4</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Homework 4
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./hw4.html">HW4</a>
+          <a href="./hw4part1.html">HW4 Part1</a>
+          <a href="./hw4part2.html">HW4 Part2</a>
+          <a href="./hw4extra.html">Hw4 Extra Credit</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Homework 5
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./hw5.html">HW5</a>
+          <a href="./hw5part1.html">HW5 Part1</a>
+          <a href="./hw5part2.html">HW5 Part2</a>
+          <a href="./hw5part3.html">HW5 Part3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Homework 6
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./hw6part1.html">HW6 Part1</a>
+          <a href="./hw6part2.html">HW6 Part2</a>
+          <a href="./hw6part3.html">HW6 Part3</a>
+        </div>
+      </div>
+    </div>
+
+    <nav id="newNav">
+      <ul>
+        <li><a href="index.html">Return</a></li>
+        <li><a href="hw7part1.html">Part 1</a></li>
+        <li><a href="hw7part2.html">Part 2</a></li>
+        <button onmouseover="showMenu()" onmouseout="hideMenu()">Hey</button>
+      </ul>
+    </nav>
+  </body>
+</html>

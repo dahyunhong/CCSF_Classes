@@ -1,76 +1,87 @@
-<!DOCTYPE html>
+<!DOCTYPE html
+><!-- Name : dahyun hong , date : Apr 21st -->
+
 <html lang="en">
   <head>
+    <meta property="og:title" content="CNIT132 Assignment" />
+    <meta
+      property="og:description"
+      content="This is the assignment for short task and homework2."
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css?family=Merienda+One"
       rel="stylesheet"
       type="text/css"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Great+Vibes"
-      rel="stylesheet"
-      type="text/css"
-    />
     <link rel="stylesheet" href="index.css" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Assignments</title>
   </head>
+
   <style>
-    body {
-      font-family: "Merienda One", Helvetica, sans-serif;
+    .img-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    header,
-    footer {
-      padding: 3rem;
-      background: lightgray;
-      color: black;
-      text-align: center;
+    .img-container .primary-img {
+      min-width: 85%;
+      height: auto;
+      opacity: 0.8;
     }
-    #contact-form .container ul li {
-      padding: 1rem;
-      padding-top: 1rem;
-      text-decoration: none;
-      list-style: none;
-    }
-    #contact-form .container ul li a {
-      text-decoration: none;
-      border-bottom: 2px black solid;
-      padding: 2px;
-      color: brown;
-    }
-    #contact-form .container ul li a:hover {
-      color: black;
-    }
-    .container {
+    .img-container .container ul {
       display: flex;
       flex-direction: row;
-      padding: 2rem;
+      text-decoration: none;
+      justify-content: space-around;
     }
-    .container img {
-      height: 500px;
-      width: auto;
+
+    .img-container .container ul li {
+      list-style-type: none;
+      padding: 1rem;
+    }
+
+    .img-container .container ul li:hover {
+      text-shadow: 1px 1px 2px pink;
     }
   </style>
 
   <body>
-    <header>
-      <h1 class="logo">CNIT 132 Assignment</h1>
+    <header id="header">
+      <h1 class="logo">
+        CNIT 132 Dahyun Hong
+      </h1>
     </header>
-    <section id="contact-form">
-      <div class="container">
+
+    <section id="middlepart">
+      <nav class="menu">
         <ul>
-          <li><a href="./homework1.html">Home</a></li>
-          <li><a href="./homework2.html">Mini Project2</a></li>
-          <li><a href="./shorttask.html">Short Task </a></li>
+          <li><a href="homework1.html">Home</a></li>
+          <li><a class="current" href="assignments.html">Assignment</a></li>
+          <li><a href="meetup.html">Meetup</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </nav>
+      <article class="img-container">
         <div class="container">
-          <img class="img" src="images/study.jpg" alt="studypic" />
+          <ul>
+            <li><a href="./homework2.html">Mini Project2</a></li>
+            <li><a href="./shorttask.html">Short Task </a></li>
+          </ul>
+          <img
+            class="primary-img"
+            src="images/study2.jpg"
+            alt="Picture of a computer monitor with HTML code on it"
+          />
         </div>
-      </div>
+      </article>
     </section>
+
     <footer id="main-footer">
       <p>CNIT132 &copy; Dahyun Hong</p>
       <p>

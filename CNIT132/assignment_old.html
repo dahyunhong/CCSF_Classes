@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      /* box-sizing: border-box; */
+    }
+
+    * {
+      border: medium;
+    }
+
+    body {
+      line-height: 1.7em;
+      font-family: "Merienda One", Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header,
+    footer {
+      color: #fff;
+      background: gray;
+      text-align: center;
+      padding: 3rem;
+      margin: 0;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      font-size: 18px;
+      color: #fff;
+      background: #333;
+      padding: 13px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    py-3 {
+      padding: 30px 0;
+    }
+
+    .l-heading {
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+    .text-primary {
+      color: #f7c08a;
+    }
+
+    #middlepart {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #middlepart .menu ul {
+      height: 100%;
+      color: #333;
+      background: white;
+      padding: 0.1rem;
+      height: auto;
+    }
+
+    #navbar {
+      color: #fff;
+      display: flex;
+      top: 0;
+
+      /* z-index: 1; */
+      padding: 0.5rem;
+    }
+
+    #navbar .logo {
+      padding: 20px;
+      /* flex-grow: 1; */
+    }
+
+    #navbar ul {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+
+    #navbar ul li a {
+      padding: 1.5rem;
+      margin: 1.5rem;
+      text-align: center;
+    }
+
+    #navbar ul li a:hover,
+    #navbar ul li a.current {
+      background: #444;
+      color: #f7c08a;
+    }
+
+    .container {
+      overflow: auto;
+      padding: 1rem;
+      /* width:100% */
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    #contact-form .container ul li {
+      list-style: none;
+      border-bottom: 2px solid;
+      padding: 3px;
+      padding-top: 1rem;
+    }
+
+    #contact-form .container ul li a:hover {
+      color: red;
+    }
+
+    #contact-form {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #contact-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    #contact-form lable {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px #ddd solid;
+    }
+
+    #contact-form textarea {
+      height: 200px;
+    }
+
+    #contact-form input:focus,
+    #contact-form textarea:focus {
+      outline: none;
+      border-color: black;
+    }
+
+    #contact-form ul li a.current {
+      color: #f7c08a;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">CNIT132</h1>
+  </header>
+  <section id="contact-form" class="py-3">
+    <div class="container">
+      <ul>
+        <li><a href="final_practice.html">Home</a></li>
+        <li><a href="final_practice.html">Assignment</a></li>
+        <li><a href="meetup.html">Meet up</a></li>
+        <li><a class="current" href="final_practice.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="img-container">
+      <img class="primary-img" src="images/study.jpg" alt="studypic" />
+    </div>
+    </div>
+  </section>
+  <footer id="main-footer">
+    <p>CNIT132 &copy; 2020, Dahyun Hong</p>
+  </footer>
+</body>
+
+</html>

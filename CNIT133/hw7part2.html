@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <title>hw7part2</title>
+    <style>
+      .logo a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .dropbtn {
+        background: #333;
+        color: #fff;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      .dropbtn:hover,
+      dropbtn:focus {
+        background-color: #fff;
+        color: black;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: pink;
+        min-width: 160px;
+        overflow: auto;
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background: #fff;
+      }
+      .show {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+    <script>
+      let mouseOver = false;
+
+      function addShow(elem) {
+        if (!elem.classList.contains("show")) {
+          elem.classList.add("show");
+        }
+      }
+
+      function removeShow(elem) {
+        if (elem.classList.contains("show")) {
+          elem.classList.remove("show");
+        }
+      }
+
+      function showDropdown(elem) {
+        const menuList = elem.nextElementSibling;
+        mouseOver = true;
+
+        addShow(menuList);
+      }
+
+      function hideDropdown(elem) {
+        const menuList = elem.nextElementSibling;
+        if (mouseOver) {
+          mouseOver = false;
+          removeShow(menuList);
+        }
+      }
+
+      function mouseisOver(elem) {
+        mouseOver = true;
+        addShow(elem);
+        return true;
+      }
+
+      function mouseisOut(elem) {
+        removeShow(elem);
+        mouseOver = false;
+        return false;
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <h1 class="logo">
+        <a href="hw7.html">
+          <span class="text-primary"><i class="fas fa-book-open"></i>HW7 </span
+          >part2
+        </a>
+      </h1>
+      <ul>
+        <li><a href="index.html">Return</a></li>
+        <li><a href="hw7part1.html">Part 1</a></li>
+        <li><a href="hw7part2.html">Part 2</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="dropdown">
+        <button
+          onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown(this)"
+          class="dropbtn"
+        >
+          Homework 1
+        </button>
+        <div
+          id="myDropDown1"
+          onmouseover="mouseisOver(this)"
+          onmouseout="mouseisOut(this)"
+          class="dropdown-content"
+        >
+          <a href="./index.html">HW1</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button
+          onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown(this)"
+          class="dropbtn"
+        >
+          Homework 2
+        </button>
+        <div
+          id="myDropDown2"
+          onmouseover="mouseisOver(this)"
+          onmouseout="mouseisOut(this)"
+          class="dropdown-content"
+        >
+          <a href="./hw2.html">HW2</a>
+          <a href="./hw2part1.html">HW2 Part1</a>
+          <a href="./hw2part2.html">HW2 Part2</a>
+          <a href="./hw2part3.html">Hw2 Part3</a>
+          <a href="./hw2extracredit.html">Hw2 Extra Credit</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button
+          onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown(this)"
+          class="dropbtn"
+        >
+          Homework 3
+        </button>
+        <div
+          id="myDropDown3"
+          onmouseover="mouseisOver(this)"
+          onmouseout="mouseisOut(this)"
+          class="dropdown-content"
+        >
+          <a href="./hw3.html">HW3</a>
+          <a href="./hw3part1.html">HW3 Part1</a>
+          <a href="./hw3part2.html">HW3 Part2</a>
+          <a href="./hw3part3.html">Hw3 Part3</a>
+          <a href="./hw3part4.html">Hw3 Part4</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button
+          onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown(this)"
+          class="dropbtn"
+        >
+          Homework 4
+        </button>
+        <div
+          id="myDropDown4"
+          onmouseover="mouseisOver(this)"
+          onmouseout="mouseisOut(this)"
+          class="dropdown-content"
+        >
+          <a href="./hw4.html">HW4</a>
+          <a href="./hw4part1.html">HW4 Part1</a>
+          <a href="./hw4part2.html">HW4 Part2</a>
+          <a href="./hw4extra.html">Hw4 Extra Credit</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button
+          onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown(this)"
+          class="dropbtn"
+        >
+          Homework 5
+        </button>
+        <div
+          id="myDropDown5"
+          onmouseover="mouseisOver(this)"
+          onmouseout="mouseisOut(this)"
+          class="dropdown-content"
+        >
+          <a href="./hw5.html">HW5</a>
+          <a href="./hw5part1.html">HW5 Part1</a>
+          <a href="./hw5part2.html">HW5 Part2</a>
+          <a href="./hw5part3.html">HW5 Part3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button
+          onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown(this)"
+          class="dropbtn"
+        >
+          Homework 6
+        </button>
+        <div
+          id="myDropDown6"
+          onmouseover="mouseisOver(this)"
+          onmouseout="mouseisOut(this)"
+          class="dropdown-content"
+        >
+          <a href="./hw6part1.html">HW6 Part1</a>
+          <a href="./hw6part2.html">HW6 Part2</a>
+          <a href="./hw6part3.html">HW6 Part3</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

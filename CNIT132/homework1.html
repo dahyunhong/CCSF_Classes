@@ -1,7 +1,14 @@
-<!DOCTYPE html>
-<!-- Name : dahyun hong , date : Feb 1st -->
+<!DOCTYPE html
+><!-- Name : dahyun hong , date : Apr 21st -->
+
 <html lang="en">
   <head>
+    <meta property="og:title" content="Main homepage" />
+    <meta
+      property="og:description"
+      content="This is the main homepage for CNIT132."
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css?family=Merienda+One"
       rel="stylesheet"
@@ -16,82 +23,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CNIT132 HTML & CSS</title>
+
+    <title>Final Assignment</title>
   </head>
+
+  <style>
+    .box-2 p,
+    h2 {
+      padding: 1.5rem;
+    }
+    img {
+      max-width: 300px;
+    }
+
+    .box {
+      /* padding: 3rem; */
+      margin: 1rem;
+      background: #fff;
+      color: #333;
+    }
+    .container .l-leading {
+      color: brown;
+    }
+  </style>
+
   <body>
-    <main>
-      <H1 style="text-align:center;">Dahyun Hong CNIT 132</H1>
-      <nav>
+    <header id="header">
+      <h1 class="logo">
+        CNIT 132 Dahyun Hong
+      </h1>
+    </header>
+
+    <main id="middlepart">
+      <nav class="menu">
         <ul>
-          <li><a href="homework1.html">Home</a></li>
+          <li><a class="current" href="homework1.html">Home</a></li>
           <li><a href="assignments.html">Assignment</a></li>
-          <li><a href="#">Meetup</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="meetup.html">Meetup</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-    </main>
-    <div class="row">
-      <div class="card">
-        <div class="card-image">
+      <section class="container">
+        <figure class="box box-1">
           <img src="images/htmlimage.jpg" alt="A picture of me at the beach" />
-        </div>
-      </div>
+        </figure>
+        <article class="box box-2">
+          <h2>Paragaraph about myself</h2>
+          <p>
+            My name is Dahyun Hong. I go by Diana. I came to United State to
+            learn english five years ago. Now, I am taking computer classes to
+            change my career at city college of san francisco. I am studying
+            HTML, CSS, and Javascript to be a junior front end developer. It is
+            really good
+            <a
+              href="https://skillcrush.com/2015/04/09/land-junior-web-developer-job/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="l-leading">article</span></a
+            >
+            for how you can be a good junior front end developer and what is
+            required. If you watn to know about CCSF student counceling, you can
+            visit the
+            <a
+              href="http://www.ccsf.edu/en/student-services/student-counseling.html#subcontent"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="l-leading">website</span></a
+            >
+            or call the number.
+          </p>
+          <h2>Good Links</h2>
+          <ul>
+            <li>
+              <a
+                href="https://skillcrush.com/2016/02/11/skills-to-become-a-front-end-developer/"
+                >skillcrush</a
+              >- what kind of skill do you need to have to be front end
+              developer?
+            </li>
+            <li>
+              <a
+                href="https://www.intechnic.com/blog/top-50-examples-best-responsive-designs/"
+                >intechnic</a
+              >
+              is a good website example
+            </li>
+            <li>
+              <a href="https://www.switchup.org/rankings/best-coding-bootcamps"
+                >bootcamp</a
+              >
+              might help you to learn a lot of things about coding in fast way.
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
 
-      <div class="paragraphs">
-        <p>
-          Paragaraph about myself<br />
-          My name is Dahyun Hong. I go by Diana. I came to United State to learn
-          english five years ago. Now, I am taking computer classes to change my
-          career at city college of san francisco. I am studying HTML, CSS, and
-          Javascript to be a junior front end developer.
-        </p>
-        <p>
-          It is really good
-          <a
-            href="https://skillcrush.com/2015/04/09/land-junior-web-developer-job/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >article</a
-          >
-          for how you can be a good junior front end developer and what is
-          required.
-        </p>
-        <p>
-          If you watn to know about CCSF student counceling, you can visit the
-          <a
-            href="http://www.ccsf.edu/en/student-services/student-counseling.html#subcontent"
-            target="_blank"
-            rel="noopener noreferrer"
-            >website</a
-          >
-          or call the number.
-        </p>
-      </div>
-    </div>
-    <hr />
-    <footer>
-      <h2>Good Links</h2>
-      <ul>
-        <li>
-          <a
-            href="https://skillcrush.com/2016/02/11/skills-to-become-a-front-end-developer/"
-            >skillcrush</a
-          >- what kind of skill do you need to have to be front end developer?
-        </li>
-        <li>
-          <a
-            href="https://www.intechnic.com/blog/top-50-examples-best-responsive-designs/"
-            >intechnic</a
-          >
-          is a good website example
-        </li>
-        <li>
-          <a href="https://www.switchup.org/rankings/best-coding-bootcamps"
-            >bootcamp</a
-          >
-          might help you to learn a lot of things about coding in fast way.
-        </li>
-      </ul>
+    <footer id="main-footer">
+      <p>CNIT132 &copy; Dahyun Hong</p>
+      <p>
+        Email me here:
+        <a
+          href="mailto:dhong24@mail.ccsf.edu?Subject=CNIT%20class%20email"
+          target="_top"
+          >dhong24@mail.ccsf.edu</a
+        >
+      </p>
     </footer>
   </body>
 </html>

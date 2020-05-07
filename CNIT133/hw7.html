@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    Coming soon.
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="133.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <title>hw7</title>
+    <style>
+      h2 {
+        background: url(open.png) no-repeat 0 11px;
+        padding: 10px 0 0 25px;
+        cursor: pointer;
+      }
+
+      h2.close {
+        background-image: url(close.png);
+      }
+
+      .answer {
+        margin-left: 25px;
+      }
+    </style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".answer").hide();
+        $(".main h2").toggle(
+          function () {
+            $(this).next(".answer").slideDown();
+            $(this).addClass("close");
+          },
+          function () {
+            $(this).next(".answer").fadeOut();
+            $(this).removeClass("close");
+          }
+        ); // end toggle
+      }); // end ready
+    </script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1  class="logo"><a href ="hw7.html">
+        <span class="text-primary"><i class="fas fa-book-open"></i>HW7</span>
+    </a></h1>
+      <ul>
+        <li><a href="index.html">Return</a></li>
+        <li><a href="hw7part1.html">Part 1</a></li>
+        <li><a href="hw7part2.html">Part 2</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+        <div class="main">
+            <h1>Homework 7:Object Model and Miscellaneous jQuery</h1>
+            <h2>Part 1</h2>
+            <div class="answer">
+                <a href="./hw7part1.html"><p>You can change the font color, font style forms.</p></a>
+            </div>
+            <h2>Part 2</h2>
+            <div class="answer">
+                <a href="./hw7part2.html"><p>Navigation bar with dropdown for homeworks</p></a>
+            </div>
+        </div>
+  </body>
 </html>

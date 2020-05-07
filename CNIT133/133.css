@@ -32,8 +32,9 @@ body {
   margin: 0 0.25rem;
 }
 #navbar ul li a:hover {
-  background: #93cb52;
+  background: pink;
   border-radius: 5px;
+  color: black;
 }
 #navbar ol li a {
   display: flex;
@@ -48,8 +49,10 @@ body {
   list-style: none;
 }
 a:hover {
-  color: white;
-  background-color: #93cb52;
+  color: black;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 5px;
 }
 .form-group {
   display: block;
@@ -69,12 +72,12 @@ a:hover {
 .btn {
   display: inline-block;
   color: #fff;
-  background: #93cb52;
+  background: pink;
   padding: 0.5rem 2rem;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
 }
 .text-primary {
-  color: #93cb52;
+  color: pink;
 }
